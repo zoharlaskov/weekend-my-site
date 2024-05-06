@@ -19,7 +19,6 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     errors = true;
   }
 
-  // אימות כתובת דוא"ל תקינה
   const email = formData.get("email");
   if (!validateEmail(email)) {
     alert("Please enter a valid email address");
@@ -27,14 +26,11 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   }
 
   if (!errors) {
-    // אין שגיאות - ניתן לשלוח את הטופס
-    // כאן נוכל להוסיף לדוגמה קריאה לפונקציה שתשלח את הטופס לשרת
     alert("Form submitted successfully");
-    // ניתן גם להפנות לעמוד תודה או לבצע פעולה נוספת
   }
 });
 
-// פונקציה לאימות כתובת דוא"ל
+
 function validateEmail(email) {
   const re = /\S+@\S+\.\S+/;
   return re.test(email);
